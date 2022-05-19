@@ -8,9 +8,10 @@ const app = express();
 app.use(cors());
 
 const quizSchema = new mongoose.Schema({
-  antwort1: String,
-  antwort2: String,
-  antwort3: String,
+  category: "Entertainment: Video Games",
+  question: "Peter Molyneux was the founder of Bullfrog Productions.",
+  correct_answer: "True",
+  incorrect_answers: ["False"],
 });
 
 const Quiz = mongoose.model("Quiz", quizSchema, "quiz");
