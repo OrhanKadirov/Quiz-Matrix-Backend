@@ -11,7 +11,6 @@ const quizSchema = new mongoose.Schema({
   category: String,
   question: String,
   correct_answer: String,
-  incorrect_answers: String,
   incorrect_answers1: String,
   incorrect_answers2: String,
 });
