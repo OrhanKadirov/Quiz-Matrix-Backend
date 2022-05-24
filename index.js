@@ -19,7 +19,7 @@ const Quiz = mongoose.model("Quiz", quizSchema, "quiz");
 
 app.get("/quiz/api", async (req, res) => {
   try {
-    const quizes = await Quiz.find().exec();
+    const quizes = await Quiz.find();
     res.json(quizes);
   } catch (error) {
     res.status(500).json({ error: error.message });
