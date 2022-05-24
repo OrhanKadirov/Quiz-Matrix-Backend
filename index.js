@@ -17,7 +17,7 @@ const quizSchema = new mongoose.Schema({
 
 const Quiz = mongoose.model("Quiz", quizSchema, "quiz");
 
-app.use("/quiz/api", async (req, res) => {
+app.get("/quiz/api", async (req, res) => {
   try {
     const quizes = await Quiz.find().exec();
     res.json(quizes);
